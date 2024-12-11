@@ -23,11 +23,15 @@ function leseDateiInhalt(logFile) {
 
 
 
-let filepath = leseDateiInhalt("./beispiel.txt");
+let filepath = resolve("./beispiel.txt");
 leseDateiInhalt(filepath)
 
 console.log(filepath)
 
+
+let text = "Hello";
+let length = text.length;
+console.log(length)
 
 
 
