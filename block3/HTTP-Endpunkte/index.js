@@ -13,11 +13,51 @@ Einen Endpunkt /xml, der eine statische XML Datei vom Server zurück gibt.
 Einen Endpunkt /me, der ein JSON Objekt zurück gibt mit den Properties Vor- und Nachname, Alter, Wohnort und Augenfarbe.
 */
 
-const fetch = require('node-fetch'); // Stelle sicher, dass `node-fetch` installiert ist
+//const fetch = require('node-fetch'); // Stelle sicher, dass `node-fetch` installiert ist
+
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+// Without middleware
+app.get('/', function (req, res) {
+  res.send("Geben sie die gewünsche Seite ein.")
+});
 
 
-const heute = new Date(); 				// aktuelles Datum und aktuelle Lokalzeit
-const utc = new Date().toUTCString();
+app.get("/now", function (req, res) {
+  function aktuelle_zeit() {
+    let jetzt = new Date();
+    let uhrzeit = jetzt.toLocaleTimeString();
+    console.log(uhrzeit); 
+  }
+  res.send(aktuelle_zeit)
+
+});
+
+
+app.get('/zli', (req, res) => {
+  res.redirect('https://www.google.com');
+  window.open("https://www.w3schools.com");
+});
+
+
+
+
+app.get('/user', function (req, res) {
+  res.send("Redirected to User Page");
+});
+
+
+
+app.listen(PORT, function (err) {
+  if (err) console.log(err);
+  console.log("Server listening on PORT", PORT);
+});
+
+
+
+
 
 
 
