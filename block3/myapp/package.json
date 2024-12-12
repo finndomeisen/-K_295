@@ -17,6 +17,8 @@
   "homepage": "https://github.com/finndomeisen/UK_295#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.7.0"
   }
 }
