@@ -30,15 +30,15 @@ app.get("/now", function (req, res) {
     let jetzt = new Date();
     let uhrzeit = jetzt.toLocaleTimeString();
     console.log(uhrzeit); 
+    return uhrzeit; // Return the time as a string
   }
-  res.send(aktuelle_zeit)
-
+  res.send(aktuelle_zeit()); // Call the function and send its return value
 });
+
 
 
 app.get('/zli', (req, res) => {
   res.redirect('https://www.google.com');
-  window.open("https://www.w3schools.com");
 });
 
 
