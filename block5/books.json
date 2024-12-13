@@ -1,0 +1,51 @@
+{
+
+  "books": [
+    {
+      "isbn": "1",
+      "title": "Suche des Landes",
+      "year": "2001",
+      "author": "Beda Brunner"
+    },
+    {
+      "isbn": "2",
+      "title": "Raum des Grauens",
+      "year": "1966",
+      "author": "Beda der Vierte"
+    },
+    {
+      "isbn": "3",
+      "title": "Hindernisse sind Gedanken",
+      "year": "2005",
+      "author": "ValonBB"
+    },
+    {
+      "isbn": "4",
+      "title": "Voller Boden",
+      "year": "1980",
+      "author": "Beda Version 6"
+    },
+    {
+      "isbn": "5",
+      "title": "Honig Puu",
+      "year": "1969",
+      "author": "Beda x Fabio"
+    }
+
+
+
+
+
+  ]
+
+
+
+
+
+
+
+
+
+  
+  
+}
