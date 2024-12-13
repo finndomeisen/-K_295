@@ -19,6 +19,9 @@ author: Name des Autors
 app.get("/", (_, res) => res.redirect("/books"));
 
 
+//app.get("/1", (_, res) => ) 
+
+
 app.get("/books", (_, res) => {
   const booksHtml = booksData.books
     .map(
@@ -28,21 +31,20 @@ app.get("/books", (_, res) => {
           Titel des Buches: <strong>${book.title}</strong>
           Erscheinungsjahr des Buches: <strong>${book.year}</strong>
           Name des Autors: <strong>${book.author}</strong>
-          
          </li> `
     )
 
     .join("");
 
   res.send(`
-    <h1>Übersicht</h1>
+    <h1 style="text-align:center;">Übersicht</h1>
     <ul>${booksHtml}</ul>
   `);  
 });
 
 
 
-app.get("/api/books", (_, res) => {
+app.get("/ap/books", (_, res) => {
   res.json(booksData);
 });
 
