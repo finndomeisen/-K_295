@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "isbn": "1",
+      "title": "Suche des Landes",
+      "year": "2001",
+      "author": "Beda Brunner"
+    },
+    {
+      "isbn": "2",
+      "title": "Raum des Grauens",
+      "year": "1966",
+      "author": "Beda der Vierte"
+    },
+    {
+      "isbn": "3",
+      "title": "Hindernisse sind Gedanken",
+      "year": "2005",
+      "author": "ValonBB"
+    },
+    {
+      "isbn": "4",
+      "title": "Kämpfen für Anfänger",
+      "year": "2008",
+      "author": "B. Brunner"
+    },
+    {
+      "isbn": "5",
+      "title": "Voller Boden",
+      "year": "1980",
+      "author": "Beda Version 6"
+    },
+    {
+      "isbn": "6",
+      "title": "Honig Puu",
+      "year": "1969",
+      "author": "Beda x Fabio"
+    },
+    {
+      "isbn": "7",
+      "title": "Achtung Treppe!",
+      "year": "2019",
+      "author": "Beda der zweihundertste"
+    }
+  ]
+}

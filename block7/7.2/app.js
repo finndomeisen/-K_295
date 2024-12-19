@@ -2,8 +2,6 @@ const express = require("express");
 const session = require("express-session");
 const fs = require("fs");
 const path = require("path");
-const swaggerUi = require('swagger-ui-express');
-const swaggerFile = require('./swagger.json');
 
 const app = express();
 
@@ -17,9 +15,6 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false } // Setzen Sie "true" in einer HTTPS-Umgebung
 }));
-
-// Swagger-UI einrichten
-app.use('/swagger-ui', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 // JSON-Dateipfade
 const booksFilePath = path.join(__dirname, "books.json");
@@ -65,6 +60,11 @@ app.get("/books", (_, res) => {
   const booksData = loadJSON(booksFilePath);
   res.json(booksData.books);
 });
+
+
+// Redirect root to the /books endpoint
+app.get("/", (_, res) => res.redirect("/books"));
+
 
 app.get("/books/:isbn", (req, res) => {
   const { isbn } = req.params;
