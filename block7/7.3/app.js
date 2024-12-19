@@ -87,6 +87,12 @@ app.delete("/name", (req, res) => {
   res.status(200).json({ message: "Name aus der Session gelöscht." });
 });
 
+
+// Redirect root to the /books endpoint
+app.get("/", (_, res) => res.redirect("/books"));
+
+
+
 // Bücher-Endpunkte
 app.get("/books", (_, res) => {
   const booksData = loadJSON(booksFilePath);
